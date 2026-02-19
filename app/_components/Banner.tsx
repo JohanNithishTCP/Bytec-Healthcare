@@ -25,14 +25,14 @@ export default function Banner() {
 
             <div className="container relative z-10">
                 <div className="max-w-2xl text-white">
-                    <h1 className="mb-6 drop-shadow-2xl font-heading leading-tight" style={{ fontSize: 'var(--fs-h1)' }}>
+                    <h1 data-aos="fade-right" className="mb-6 drop-shadow-2xl font-heading leading-tight" style={{ fontSize: 'var(--fs-h1)' }}>
                         Mobile Platforms, <br />
                         <span className="text-secondary">you can count on.</span>
                     </h1>
-                    <p className="text-xl opacity-90 leading-relaxed max-w-lg mb-10 font-sans" style={{ fontSize: 'var(--fs-h3)' }}>
+                    <p data-aos="fade-right" data-aos-delay="200" className="text-xl opacity-90 leading-relaxed max-w-lg mb-10 font-sans" style={{ fontSize: 'var(--fs-h3)' }}>
                         Bytec Healthcare standard mobile workstations and ergonomic product line for today's modern healthcare environments.
                     </p>
-                    <div className="flex gap-4">
+                    <div data-aos="fade-up" data-aos-delay="400" className="flex gap-4">
                         <button className="bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all flex items-center gap-3 group shadow-xl shadow-black/20">
                             Explore Solutions
                             <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>

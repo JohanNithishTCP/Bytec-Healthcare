@@ -1,9 +1,10 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay } from 'swiper/modules';
+import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
 
 const slides = [
     {
@@ -45,10 +46,11 @@ export default function SolutionsSlider() {
     return (
         <section className="section bg-white overflow-hidden">
             <Swiper
-                modules={[Pagination, Autoplay]}
+                modules={[Pagination, Autoplay, EffectFade]}
+                effect="fade"
+                fadeEffect={{ crossFade: true }}
                 pagination={{ clickable: true }}
                 autoplay={{ delay: 5000 }}
-                spaceBetween={50}
                 slidesPerView={1}
                 className="solutions-swiper"
             >
@@ -56,7 +58,7 @@ export default function SolutionsSlider() {
                     <SwiperSlide key={i}>
                         <div className="container py-10">
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                                <div className="order-2 lg:order-1">
+                                <div className="order-2 lg:order-1" data-aos="fade-right">
                                     <div className={`inline-block px-5 py-1.5 rounded-full text-xs font-black tracking-[0.2em] mb-8 uppercase ${slide.bgClass || (slide.themeColor === 'accent' ? 'bg-accent/10' : 'bg-secondary/10')} ${slide.textClass || (slide.themeColor === 'accent' ? 'text-accent' : 'text-secondary')}`}>
                                         {slide.category}
                                     </div>
@@ -77,7 +79,7 @@ export default function SolutionsSlider() {
                                     </button>
                                 </div>
 
-                                <div className="order-1 lg:order-2 relative h-[550px] group">
+                                <div className="order-1 lg:order-2 relative h-[550px] group" data-aos="fade-left">
                                     {/* Decorative Platform Design */}
                                     <div className={`absolute inset-x-0 bottom-0 h-48 bg-gradient-to-br ${slide.gradient} rounded-[50px] transform perspective-[2000px] rotateX-[15deg] shadow-2xl group-hover:rotateX-[10deg] transition-all duration-700`}></div>
 

@@ -26,7 +26,7 @@
   --section-padding: clamp(3rem, 10vh, 6rem);
 }
 
-@theme inline {
+@theme {
   --color-primary: var(--primary-blue);
   --color-secondary: var(--secondary-cyan);
   --color-accent: var(--accent-green);
@@ -74,7 +74,7 @@ p {
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }

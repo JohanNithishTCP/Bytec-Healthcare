@@ -49,12 +49,12 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className="container flex flex-col md:flex-row justify-between items-center gap-8 pt-10 border-t border-white/10">
+            <div className="container grid grid-cols-3 justify-between items-center pt-10 border-t border-white/10">
                 <p className="text-white/90 text-[10px] mt-2">
                     Bytec Healthcare © 1999–2026. All rights reserved.
                 </p>
 
-                <div className="flex gap-4 mt-2">
+                <div className="flex justify-center gap-4 mt-2">
                     {socialIcons.map((icon, i) => (
                         <a key={i} href="#" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all">
                             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d={icon.d} /></svg>
@@ -62,7 +62,7 @@ export default function Footer() {
                     ))}
                 </div>
 
-                <div className="flex items-center gap-2 mt-2">
+                <div className="flex items-center justify-end gap-2 mt-2">
                     <img src={`/home/footer-1.png`} width={`220px`} alt="footer" />
                 </div>
             </div>

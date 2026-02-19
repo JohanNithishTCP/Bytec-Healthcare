@@ -24,6 +24,8 @@ export const metadata: Metadata = {
 
 
 
+import AosInit from "./_components/AosInit";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,6 +36,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <AosInit />
         {children}
       </body>
     </html>

@@ -5,7 +5,7 @@ export default function Collaboration() {
         <section className="py-10 border-b border-gray-50 bg-gray-100 ">
             <div className="container">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-                    <div className="max-w-xl">
+                    <div className="max-w-xl" data-aos="fade-up">
                         <h2 className="mb-6 leading-tight" style={{ fontSize: 'var(--fs-h2)' }}>
                             Collaboration that makes adoption, <br />
                             <span className="text-gradient-blue">Smoother, faster, safer!</span>
@@ -14,7 +14,7 @@ export default function Collaboration() {
                             Whether you're looking for specialized solutions for point of care and frontline clinician workflows, we provide an essential foundation for digital healthcare and integrated patient management.
                         </p>
                     </div>
-                    <div className="grid grid-cols-3 items-center justify-center md:justify-end gap-6 transition-all duration-700">
+                    <div className="grid grid-cols-3 items-center justify-center md:justify-end gap-6 transition-all duration-700" data-aos="fade-left" data-aos-delay="200">
                         {/* Partner Logos Placeholders */}
                         <img src="/home/collaboration-1.png" width={"150px"} alt="MEVTEC" />
                         <img src="/home/collaboration-2.png" width={"150px"} alt="Canon" />

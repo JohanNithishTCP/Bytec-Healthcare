@@ -10,7 +10,7 @@ export default function BuildQuality() {
             <div className="container relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                     <div>
-                        <h2 className="mb-12 leading-[1.1]" style={{ fontSize: 'var(--fs-h2)' }}>
+                        <h2 data-aos="fade-up" className="mb-12 leading-[1.1]" style={{ fontSize: 'var(--fs-h2)' }}>
                             Robust Build Quality <br />
                             <span className="text-secondary">for clinical demands.</span>
                         </h2>
@@ -21,7 +21,7 @@ export default function BuildQuality() {
                                 "UK designed & manufactured solution",
                                 "Engineered for Everyday Efficiency"
                             ].map((text, i) => (
-                                <li key={i} className="flex items-start gap-6 group">
+                                <li key={i} data-aos="fade-up" data-aos-delay={i * 100} className="flex items-start gap-6 group">
                                     <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center shrink-0 border border-white/20 group-hover:bg-secondary group-hover:border-secondary group-hover:scale-110 transition-all duration-500 shadow-lg">
                                         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
@@ -35,7 +35,7 @@ export default function BuildQuality() {
                             ))}
                         </ul>
                     </div>
-                    <div className="flex justify-center">
+                    <div className="flex justify-center" data-aos="fade-left">
                         <img src={`/home/build-quality.png`} alt="Built on 25 years of expertise." />
                     </div>
                 </div>
