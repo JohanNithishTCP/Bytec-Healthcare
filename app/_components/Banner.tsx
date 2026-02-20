@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 const bannerVideos = [
     "https://cdn.clinicalvisuals.com/siteImages/bytech/bytec_01.webm",
@@ -10,6 +10,20 @@ const bannerVideos = [
 
 export default function Banner() {
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+    const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+    useEffect(() => {
+        videoRefs.current.forEach((video, index) => {
+            if (video) {
+                if (index === currentVideoIndex) {
+                    video.currentTime = 0;
+                    video.play().catch((err) => console.log("Video play failed", err));
+                } else {
+                    video.pause();
+                }
+            }
+        });
+    }, [currentVideoIndex]);
 
     const handleVideoEnd = () => {
         setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % bannerVideos.length);
@@ -20,20 +34,22 @@ export default function Banner() {
             {/* Hero Image Placeholder */}
             <div className="absolute inset-0 bg-[#1a1a1a]">
                 {/* The user will place image here */}
-                <div className="w-full h-full flex flex-col items-center justify-center text-gray-700/50 select-none">
-                    <svg className="w-24 h-24 mb-4 opacity-20" fill="currentColor" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" /></svg>
-                    <span className="font-bold text-2xl tracking-widest">HERO BACKGROUND IMAGE</span>
-                    <p className="text-sm mt-2 font-mono">Workflow image placement area</p>
-                </div>
-                <video
-                    key={currentVideoIndex}
-                    src={bannerVideos[currentVideoIndex]}
-                    autoPlay
-                    muted
-                    playsInline
-                    onEnded={handleVideoEnd}
-                    className="absolute inset-0 w-full h-full object-cover z-0"
-                ></video>
+                {/* The user will place image here */}
+                {bannerVideos.map((src, index) => (
+                    <video
+                        key={index}
+                        ref={(el) => {
+                            if (el) videoRefs.current[index] = el;
+                        }}
+                        src={src}
+                        muted
+                        playsInline
+                        onEnded={index === currentVideoIndex ? handleVideoEnd : undefined}
+                        className={`absolute inset-0 w-full h-full object-cover transition-all duration-[2000ms] ease-in-out ${index === currentVideoIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                            }`}
+                        preload="auto"
+                    />
+                ))}
                 {/* Overlay for text readability */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/0 to-transparent z-10"></div>
             </div>

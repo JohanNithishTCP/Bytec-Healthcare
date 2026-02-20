@@ -64,15 +64,19 @@ export default function TabsContent() {
                             </p>
                         </div>
                         <div className="aspect-video rounded-2xl overflow-hidden relative shadow-md">
-                            <video
-                                key={activeTab}
-                                src={tabData[activeTab].video}
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
-                                className="w-full h-full object-cover transition-opacity duration-500 animate-in fade-in fill-none"
-                            />
+                            {tabData.map((tab, i) => (
+                                <video
+                                    key={i}
+                                    src={tab.video}
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    preload="auto"
+                                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${activeTab === i ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                                        }`}
+                                />
+                            ))}
                         </div>
                     </div>
                 </div>
