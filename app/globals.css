@@ -74,10 +74,29 @@ p {
 }
 
 .container {
-  max-width: 1300px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  width: 100%;
 }
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1520px;
+  }
+}
+
+/* @media (min-width: 1920px) {
+  .container {
+    max-width: 1720px;
+  }
+} */
 
 .section {
   padding: var(--section-padding) 0;

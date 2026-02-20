@@ -1,8 +1,24 @@
 'use client';
+import { useState, useEffect } from 'react';
 
 export default function Header() {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsVisible(true);
+            } else {
+                setIsVisible(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-        <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white">
+        <header className={`fixed top-0 z-50 w-full border-b border-gray-100 bg-white transition-all duration-500 ease-in-out ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
             <div className="container flex items-center justify-between h-20">
                 <div className="flex items-center gap-2">
                     {/* Logo Placeholder - Bytec Healthcare */}

@@ -1,5 +1,9 @@
 'use client';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
+
 export default function Collaboration() {
     return (
         <section className="py-10 border-b border-gray-50 bg-gray-100 ">
@@ -14,11 +18,32 @@ export default function Collaboration() {
                             Whether you're looking for specialized solutions for point of care and frontline clinician workflows, we provide an essential foundation for digital healthcare and integrated patient management.
                         </p>
                     </div>
-                    <div className="grid grid-cols-3 items-center justify-center md:justify-end gap-6 transition-all duration-700" data-aos="fade-left" data-aos-delay="200">
-                        {/* Partner Logos Placeholders */}
-                        <img src="/home/collaboration-1.png" width={"150px"} alt="MEVTEC" />
-                        <img src="/home/collaboration-2.png" width={"150px"} alt="Canon" />
-                        <img src="/home/collaboration-3.png" width={"150px"} alt="Partner" />
+                    <div className="w-full md:w-1/2" data-aos="fade-left" data-aos-delay="200">
+                        <Swiper
+                            modules={[Autoplay]}
+                            autoplay={{
+                                delay: 2500,
+                                disableOnInteraction: false,
+                            }}
+                            loop={true}
+                            spaceBetween={30}
+                            slidesPerView={2}
+                            breakpoints={{
+                                640: {
+                                    slidesPerView: 2,
+                                },
+                                768: {
+                                    slidesPerView: 3,
+                                },
+                            }}
+                            className="logo-swiper"
+                        >
+                            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((num, idx) => (
+                                <SwiperSlide key={idx} className="flex items-center justify-center">
+                                    <img src={`/home/collaboration-${num}.png`} className="w-[150px] h-auto object-contain transition-all duration-500" alt="Partner Logo" />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                     </div>
                 </div>
             </div>

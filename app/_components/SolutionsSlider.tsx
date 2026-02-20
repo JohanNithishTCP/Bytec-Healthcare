@@ -9,7 +9,7 @@ import 'swiper/css/effect-fade';
 const slides = [
     {
         category: "2026 COLLECTION",
-        title: { main: "Essential", sub: "mobility.\nExceptional value." },
+        title: { main: "Essential", sub: "mobility.<br/>Exceptional value." },
         description: "Whether you're looking for specialized solutions for point of care and frontline clinician workflows, we provide an essential foundation for digital healthcare and integrated patient management.",
         buttonText: "EXPLORE LITELINE",
         image: "/home/slider-1.png",
@@ -19,7 +19,7 @@ const slides = [
     },
     {
         category: "CLINICAL PERFORMANCE",
-        title: { main: "Built for", sub: "Workflows,\nNot Workarounds." },
+        title: { main: "Built for", sub: "Workflows,<br/>Not Workarounds." },
         description: "MedLine goes beyond basic carts, delivering adaptable, non-powered workstations engineered for demanding clinical environments. With modular flexibility and ergonomic design, MedLine empowers clinicians.",
         buttonText: "EXPLORE MEDLINE",
         image: "/home/slider-2.png",
@@ -29,7 +29,7 @@ const slides = [
     },
     {
         category: "AWARDED SOLUTIONS",
-        title: { main: "Uninterrupted", sub: "workflow,\nAwarded performance." },
+        title: { main: "Uninterrupted", sub: "workflow,<br/>Awarded performance." },
         description: "Bytec's award-winning GeniTec™ power platform gives clinicians safe, swappable, and smart power for an uninterrupted workflow. With extended uptime and advanced compliance features.",
         buttonText: "EXPLORE GENITEC",
         image: "/home/slider-3.png",
@@ -66,7 +66,7 @@ export default function SolutionsSlider() {
                                         <span className={` decoration-8 ${slide.textClass || (slide.themeColor === 'accent' ? 'text-accent' : 'text-secondary')}`}>
                                             {slide.title.main}
                                         </span>{' '}
-                                        {slide.title.sub}
+                                        <span dangerouslySetInnerHTML={{ __html: slide.title.sub }} />
                                     </h2>
                                     <p className="text-light text-xl mb-12 max-w-lg leading-relaxed font-sans">
                                         {slide.description}
@@ -80,11 +80,8 @@ export default function SolutionsSlider() {
                                 </div>
 
                                 <div className="order-1 lg:order-2 relative h-[550px] group" data-aos="fade-left">
-                                    {/* Decorative Platform Design */}
-                                    <div className={`absolute inset-x-0 bottom-0 h-48 bg-gradient-to-br ${slide.gradient} rounded-[50px] transform perspective-[2000px] rotateX-[15deg] shadow-2xl group-hover:rotateX-[10deg] transition-all duration-700`}></div>
-
-                                    {/* Reflection Effect */}
-                                    <div className="absolute inset-x-12 bottom-12 h-6 bg-white/20 rounded-full blur-xl opacity-50"></div>
+                                    {/* Decorative Platform Design extending to the right edge */}
+                                    <div className={`h-[310px] absolute left-0 md:-left-20 right-[-100vw] bottom-0 bg-gradient-to-br ${slide.gradient} rounded-l-[50px] border-8 border-white shadow-2xl transition-all duration-700`}></div>
 
                                     <div className="absolute inset-0 flex items-center justify-center">
                                         {slide.image ? (
@@ -92,7 +89,7 @@ export default function SolutionsSlider() {
                                                 <img
                                                     src={slide.image}
                                                     alt={slide.platformLabel}
-                                                    className="max-w-full max-h-[90%] object-contain drop-shadow-[0_35px_35px_rgba(0,0,0,0.3)]"
+                                                    className="max-w-full w-[720px]! max-h-[90%] object-contain drop-shadow-[0_35px_35px_rgba(0,0,0,0.3)]"
                                                 />
                                             </div>
                                         ) : (

@@ -24,27 +24,36 @@ export default function Footer() {
                 <div>
                     <h4 className="font-bold text-lg mb-8 text-white">Products</h4>
                     <ul className="space-y-4 text-white/90 font-medium text-sm">
-                        <li><a href="#" className="hover:text-white transition-colors">mobile devices</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors">mobile carts</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors">wall mounts</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors">for the clinical</a></li>
+                        <li><a href="#" className="hover:text-white transition-colors">SmartLine</a></li>
+                        <li><a href="#" className="hover:text-white transition-colors">MediLine</a></li>
+                        <li><a href="#" className="hover:text-white transition-colors">Liteline</a></li>
+                        <li><a href="#" className="hover:text-white transition-colors">Accessories</a></li>
                     </ul>
                 </div>
+                {/* <div>
+                    <h4 className="font-bold text-lg mb-8 text-white">Products</h4>
+                    <ul className="space-y-4 text-white/90 font-medium text-sm">
+                        <li><a href="#" className="hover:text-white transition-colors">Medical AIO PCs</a></li>
+                        <li><a href="#" className="hover:text-white transition-colors">Medical AI PC</a></li>
+                        <li><a href="#" className="hover:text-white transition-colors">Medical Monitor</a></li>
+                        <li><a href="#" className="hover:text-white transition-colors">Terminal Monitor</a></li>
+                    </ul>
+                </div> */}
                 <div>
                     <h4 className="font-bold text-lg mb-8 text-white">Solutions</h4>
                     <ul className="space-y-4 text-white/90 font-medium text-sm">
-                        <li><a href="#" className="hover:text-white transition-colors">accessories</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors">tech support</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors">customer support</a></li>
+                        <li><a href="#" className="hover:text-white transition-colors">Maintenance</a></li>
+                        <li><a href="#" className="hover:text-white transition-colors">RMA Support</a></li>
+                        <li><a href="#" className="hover:text-white transition-colors">Contact Support</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 className="font-bold text-lg mb-8 text-white">Company</h4>
                     <ul className="space-y-4 text-white/90 font-medium text-sm">
-                        <li><a href="#" className="hover:text-white transition-colors">about us</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors">our history</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors">contact us</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors">our brand</a></li>
+                        <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" className="hover:text-white transition-colors">Our Partners</a></li>
+                        <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="#" className="hover:text-white transition-colors">Staff Portal</a></li>
                     </ul>
                 </div>
             </div>

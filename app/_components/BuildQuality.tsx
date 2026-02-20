@@ -2,12 +2,12 @@
 
 export default function BuildQuality() {
     return (
-        <section className="section bg-gradient-to-br from-primary via-[#003d80] to-[#002a55] text-white relative overflow-hidden">
+        <section className="section bg-gradient-to-r to-secondary from-primary text-white relative overflow-hidden">
             {/* Animated Orbs for Depth */}
             <div className="absolute -right-20 -top-20 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[100px]"></div>
             <div className="absolute -left-20 -bottom-20 w-[500px] h-[500px] bg-white/5 rounded-full blur-[100px]"></div>
 
-            <div className="container relative z-10">
+            <div className="container lg:px-40! relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                     <div>
                         <h2 data-aos="fade-up" className="mb-12 leading-[1.1]" style={{ fontSize: 'var(--fs-h2)' }}>
