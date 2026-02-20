@@ -12,7 +12,7 @@ const slides = [
         title: { main: "Essential", sub: "mobility.<br/>Exceptional value." },
         description: "Whether you're looking for specialized solutions for point of care and frontline clinician workflows, we provide an essential foundation for digital healthcare and integrated patient management.",
         buttonText: "EXPLORE LITELINE",
-        image: "/home/slider-1.png",
+        image: "/home/slider-1.webp",
         themeColor: "accent", // Green
         gradient: "from-accent via-[#45a840] to-[#2d7a29]",
         platformLabel: "LITELINE PORTFOLIO"
@@ -22,7 +22,7 @@ const slides = [
         title: { main: "Built for", sub: "Workflows,<br/>Not Workarounds." },
         description: "MedLine goes beyond basic carts, delivering adaptable, non-powered workstations engineered for demanding clinical environments. With modular flexibility and ergonomic design, MedLine empowers clinicians.",
         buttonText: "EXPLORE MEDLINE",
-        image: "/home/slider-2.png",
+        image: "/home/slider-2.webp",
         themeColor: "[#00aeef]", // Secondary Blue/Cyan
         gradient: "from-secondary via-[#0096ce] to-[#007ba8]",
         platformLabel: "MEDLINE PORTFOLIO"
@@ -32,7 +32,7 @@ const slides = [
         title: { main: "Uninterrupted", sub: "workflow,<br/>Awarded performance." },
         description: "Bytec's award-winning GeniTec™ power platform gives clinicians safe, swappable, and smart power for an uninterrupted workflow. With extended uptime and advanced compliance features.",
         buttonText: "EXPLORE GENITEC",
-        image: "/home/slider-3.png",
+        image: "/home/slider-3.webp",
         themeColor: "fuchsia-600",
         buttonClass: "bg-fuchsia-600 hover:bg-fuchsia-700 shadow-fuchsia-600/20",
         textClass: "text-fuchsia-600",
