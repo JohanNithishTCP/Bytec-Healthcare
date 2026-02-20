@@ -102,7 +102,11 @@ p {
   padding: var(--section-padding) 0;
 }
 
-/* Custom Utilities for Premium Look */
+section {
+  overflow: hidden !important;
+}
+
+
 .glass {
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px);

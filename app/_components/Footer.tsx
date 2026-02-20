@@ -58,8 +58,8 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className="container grid grid-cols-3 justify-between items-center pt-10 border-t border-white/10">
-                <p className="text-white/90 text-[10px] mt-2">
+            <div className="container grid lg:grid-cols-3 grid-cols-1 justify-between items-center pt-10 border-t border-white/10">
+                <p className="text-white/90 text-[10px] mt-2 lg:text-left text-center">
                     Bytec Healthcare © 1999–2026. All rights reserved.
                 </p>
 
@@ -71,7 +71,7 @@ export default function Footer() {
                     ))}
                 </div>
 
-                <div className="flex items-center justify-end gap-2 mt-2">
+                <div className="flex items-center lg:justify-end justify-center gap-2 mt-2">
                     <img src={`/home/footer-1.png`} width={`220px`} alt="footer" />
                 </div>
             </div>

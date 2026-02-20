@@ -8,7 +8,7 @@ const tabData = [
         title: "Medtronic",
         subheading: "Building the Connected Operating Room of the Future",
         description: "Neagen Energist is leading innovation in cold plasma therapy for skin regeneration and scar reduction. Bytec Healthcare created a custom medical cart to house and support the system, ensuring safety, mobility, and reliability in hospitals and clinics, and helping make Neagen's pioneering treatment accessible worldwide.",
-        image: "/home/tab-main-1.webp",
+        video: "https://cdn.clinicalvisuals.com/medical/bytec/short_clips/Bytec_01.webm",
         logo: "/home/tab-1.png"
     },
     {
@@ -16,7 +16,7 @@ const tabData = [
         title: ")( Echopoint",
         subheading: "Revealing the Unseen in Cardiac Care",
         description: "EchoPoint Medical is transforming heart diagnostics with advanced microcatheter technology that reveals conditions traditional tools often miss. Bytec healthcare engineered the complete hardware platform, from the cart and housing to the electronics, turning EchoPoint's concept into a clinically deployable device that helps deliver more accurate and informed cardiac care.",
-        image: "/home/tab-main-2.webp",
+        video: "https://cdn.clinicalvisuals.com/medical/bytec/short_clips/Bytec_02.webm",
         logo: "/home/tab-2.png"
     },
     {
@@ -24,7 +24,7 @@ const tabData = [
         title: "NEOGEN",
         subheading: "Transforming Skin Regeneration",
         description: "Neagen Energist is leading innovation in cold plasma therapy for skin regeneration and scar reduction. Bytec Healthcare created a custom medical cart to house and support the system, ensuring safety, mobility, and reliability in hospitals and clinics, and helping make Neagen's pioneering treatment accessible worldwide.",
-        image: "/home/tab-main-3.webp",
+        video: "https://cdn.clinicalvisuals.com/medical/bytec/short_clips/Bytec_03.webm",
         logo: "/home/tab-3.jpg"
     }
 ];
@@ -36,7 +36,7 @@ export default function TabsContent() {
         <section className="section bg-bg-gray">
             <div className="container">
                 {/* Tabs Navigation */}
-                <div className="flex flex-wrap rounded-t-3xl overflow-hidden shadow-sm" data-aos="fade-up">
+                <div className="grid sm:grid-cols-3 grid-cols-1 rounded-t-3xl overflow-hidden shadow-sm" data-aos="fade-up">
                     {tabData.map((tab, i) => (
                         <button
                             key={i}
@@ -48,8 +48,8 @@ export default function TabsContent() {
                     ))}
                 </div>
                 {/* Active Tab Content Area */}
-                <div className="bg-white p-12 lg:p-20 rounded-b-3xl shadow-sm border-x border-b border-gray-100" data-aos="fade-up" data-aos-delay="200">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="bg-white p-5 lg:p-20 rounded-b-3xl shadow-sm border-x border-b border-gray-100" data-aos="fade-up" data-aos-delay="200">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-16  items-center">
                         <div>
                             <div className="mb-6 h-12 flex items-center">
                                 <img
@@ -64,10 +64,13 @@ export default function TabsContent() {
                             </p>
                         </div>
                         <div className="aspect-video rounded-2xl overflow-hidden relative shadow-md">
-                            <img
+                            <video
                                 key={activeTab}
-                                src={tabData[activeTab].image}
-                                alt={tabData[activeTab].title}
+                                src={tabData[activeTab].video}
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
                                 className="w-full h-full object-cover transition-opacity duration-500 animate-in fade-in fill-none"
                             />
                         </div>
