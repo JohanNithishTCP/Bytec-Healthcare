@@ -2,10 +2,10 @@
 import { useState } from 'react';
 
 const bannerVideos = [
-    "https://cdn.clinicalvisuals.com/medical/kap/landingpage/001.webm",
-    "https://cdn.clinicalvisuals.com/medical/kap/landingpage/002.webm",
-    "https://cdn.clinicalvisuals.com/medical/kap/landingpage/003.webm",
-    "https://cdn.clinicalvisuals.com/medical/kap/landingpage/004.webm",
+    "https://cdn.clinicalvisuals.com/siteImages/bytech/bytec_01.webm",
+    "https://cdn.clinicalvisuals.com/siteImages/bytech/bytec_02.webm",
+    "https://cdn.clinicalvisuals.com/siteImages/bytech/bytec_03.webm",
+    "https://cdn.clinicalvisuals.com/siteImages/bytech/bytec_04.webm",
 ];
 
 export default function Banner() {
@@ -20,11 +20,11 @@ export default function Banner() {
             {/* Hero Image Placeholder */}
             <div className="absolute inset-0 bg-[#1a1a1a]">
                 {/* The user will place image here */}
-                <div className="w-full h-full flex flex-col items-center justify-center text-gray-700/50 select-none">
+                {/* <div className="w-full h-full flex flex-col items-center justify-center text-gray-700/50 select-none">
                     <svg className="w-24 h-24 mb-4 opacity-20" fill="currentColor" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" /></svg>
                     <span className="font-bold text-2xl tracking-widest">HERO BACKGROUND IMAGE</span>
                     <p className="text-sm mt-2 font-mono">Workflow image placement area</p>
-                </div>
+                </div> */}
                 <video
                     key={currentVideoIndex}
                     src={bannerVideos[currentVideoIndex]}
