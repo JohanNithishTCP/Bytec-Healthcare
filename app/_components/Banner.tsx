@@ -2,10 +2,10 @@
 import { useState } from 'react';
 
 const bannerVideos = [
-    "https://cdn.clinicalvisuals.com/siteImages/bytech/bytec_01.webm",
-    "https://cdn.clinicalvisuals.com/siteImages/bytech/bytec_02.webm",
-    "https://cdn.clinicalvisuals.com/siteImages/bytech/bytec_03.webm",
-    "https://cdn.clinicalvisuals.com/siteImages/bytech/bytec_04.webm",
+    "https://cdn.clinicalvisuals.com/medical/kap/landingpage/001.webm",
+    "https://cdn.clinicalvisuals.com/medical/kap/landingpage/002.webm",
+    "https://cdn.clinicalvisuals.com/medical/kap/landingpage/003.webm",
+    "https://cdn.clinicalvisuals.com/medical/kap/landingpage/004.webm",
 ];
 
 export default function Banner() {
